@@ -249,5 +249,8 @@ public function delete($idusuarios){
 
 }
 
+public function dataError() {
+  mensajeError("Debe digitar usuario y contraseña");
+}
 }
 

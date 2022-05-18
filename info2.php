@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE php>
+<php lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,18 +27,18 @@
           <div class="collapse navbar-collapse" id="navbarColor02">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="dashboard.html">Inicio
+                <a class="nav-link active" href="dashboardTrabajador.php">Inicio
                   <span class="visually-hidden">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="info.html">Información personal</a>
+                <a class="nav-link" href="info.php">Información personal</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="dolencias.html">Dolencias</a>
+                <a class="nav-link" href="dolencias.php">Dolencias</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="recomendaciones.html">Recomendaciones</a>
+                <a class="nav-link" href="recomendaciones.php">Recomendaciones</a>
               </li>
             </ul>
               <a class="nav-link" href="#" class="navbar-toggler" style="color: #FFFFFF; text-decoration: none"><i class="bi bi-person-circle"></i> María Rodriguez</a>
@@ -149,4 +149,4 @@
     
     
 </body>
-</html>
+</php>

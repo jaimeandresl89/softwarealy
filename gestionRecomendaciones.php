@@ -1,39 +1,33 @@
+<?php
+session_start();
+if ($_SESSION["type_user"]  != 'admin') {
+  header('Location:dashboardTrabajador.php');
+}
+include './classDAO/recomendacionesDAO.php';
+?>
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-  <script src="js/sweetalert2.all.min.js"></script>
-  <title>--Recomendaciones--</title>
-  <style>
-    #car {
-      padding-bottom: 80px;
-    }
-  </style>
+  <?php include_once('./includes/header.php') ?>
+  <title>Gestion Recomendaciones</title>
 </head>
 <?php
-session_start();
-include './classDAO/recomendacionesDAO.php';
-$objrec = new recomendacionesClass();
-$recdao = new recomendacionesDAO();
-if (!empty($_POST['recomendacion'])) {
+  $objrec = new recomendacionesClass();
+  $recdao = new recomendacionesDAO();
+  if (!empty($_POST['recomendacion'])) {
 
-  $objrec->setRecomendacion($_POST['recomendacion']);
-  $objrec->setEnlace($_POST['enlace']);
-  $objrec->setId_parte($_POST['parte']);
-  $recdao->create($objrec);
-}
+    $objrec->setRecomendacion($_POST['recomendacion']);
+    $objrec->setEnlace($_POST['enlace']);
+    $objrec->setId_parte($_POST['parte']);
+    $recdao->create($objrec);
+  }
 ?>
 
 <body>
-  <?php include_once 'menu.php'; ?>
+  <?php include_once './includes/menu-admin.php'; ?>
 
-  <div class="container" id="car">
+  <div class="container container-gestion-usuarios py-aly" id="car">
     <h1 class="text-center">Gestión Recomendaciones</h1><br><br>
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <li class="nav-item" role="presentation">

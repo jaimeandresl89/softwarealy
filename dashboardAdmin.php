@@ -1,47 +1,43 @@
+<?php 
+  session_start();
+  if( $_SESSION["type_user"]  != 'admin' ) {
+    header('Location:dashboardTrabajador.php');
+  }
+?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
-    <title>Inicio de sesión</title>
-    <style>
-       body{
-           background-color:aliceblue
-        }
-        
-        #cards{
-            margin-top: 150px;
-            margin-bottom: auto;
-            align-content: center;
-            vertical-align: middle;
-        }
-    </style>
+  <?php include_once('./includes/header.php') ?>
+  <title>Dashboard Admin</title>
 </head>
-<body>
-    
-  <?php include_once 'menu.php'; ?>
-    
-    <div class="container" id="cards">
-        <div class="row">
-            <div class="col-sm d-flex justify-content-center">
-            <a href="gestionUsuarios.html" class="btn btn-primary"><img src="img/people-fill.svg" class="card-img-top" alt="...">Gestión de Usuarios</a>
-            </div>
-            <div class="col-sm d-flex justify-content-center">
-                <a href="info.html" class="btn btn-primary"><img src="img/journal-check.svg" class="card-img-top" alt="...">Administrar Encuesta</a>
-            </div>
-            <div class="col-sm d-flex justify-content-center">
-                <a href="gestionRecomendaciones.php" class="btn btn-primary"><img src="img/list-check.svg" class="card-img-top" alt="...">Recomendaciones</a>
-            </div>
-        </div>
+
+<body class="dashboard-admin">
+
+  <?php include_once './includes/menu-admin.php'; ?>
+
+  <div class="container container-cards">
+    <div class="row d-flex justify-content-center ">
+      <div class="col-12 col-md-6 col-lg-4 col-card h-100">
+        <a href="gestionUsuarios.php" class="btn">
+          <img src="img/people-fill.svg" class="card-img-top" >
+          Gestión de Usuarios
+        </a>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-card h-100">
+        <a href="info.php" class="btn">
+          <img src="img/journal-check.svg" class="card-img-top">
+          Administrar Encuesta
+        </a>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4 col-card h-100">
+        <a href="gestionRecomendaciones.php" class="btn">
+          <img src="img/list-check.svg" class="card-img-top">
+          Recomendaciones
+        </a>
+      </div>
     </div>
-    
-    
-    
-    
-    
+  </div>
 </body>
+
 </html>

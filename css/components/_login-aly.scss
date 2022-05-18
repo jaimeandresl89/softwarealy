@@ -1,0 +1,24 @@
+.container-login {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  .card-login {
+    background-color: white;
+    border-radius: 20px;
+    text-align: center;
+    transition: 1s  ease-in-out;
+    padding: 25px;
+    &:hover {
+      transform: translateY(-10px);
+    }
+    .logo-aly {
+      max-width: 90%;
+      margin: auto;
+    }
+    .title {
+      color: $darkblue;
+      padding-bottom: 15px;
+      border-bottom: 2px solid $darkblue;
+    }
+  }
+  
+}

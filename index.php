@@ -1,78 +1,71 @@
-<?php 
-session_start();
-include 'classDAO/usuariosDAO.php'; 
-  $usuDAO= new usuariosDAO();
-?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+<!DOCTYPE php>
+<php lang="es">
+  <head>
+    <?php include_once('./includes/header.php') ?>
     <title>Inicio de sesión</title>
-    <style>
-        body{
-            background-color:aliceblue; 
+  </head>
+  <?php
+    session_start();
+    include 'classDAO/usuariosDAO.php';
+    $usuDAO = new usuariosDAO();
+    if ( !empty($_POST['email']) && !empty($_POST['pass'])  ) {
+      if ( $_POST['email'] == "adminaly@admin.com.co") {
+        $_SESSION['type_user'] = 'admin';
+        $_SESSION['id'] = 'id_admin';
+        $_SESSION['nom'] = 'Administrador';
+        header('Location:dashboardAdmin.php');
+      } else {
+        $datos = [];
+        $datos = $usuDAO->obtenerUsuCorreo($_POST['email']);
+        foreach ($datos as $dato) {
+          $nombre = $dato['nombre'] . " " . $dato['apellido'];
+          $_SESSION['id'] = $dato['id'];
+          $_SESSION['nom'] = $nombre;
+          $_SESSION['type_user'] = 'user';
         }
-        #central{
-            
-            padding-top: 200px;
-        }
-       
-    </style>
-<body>
-  <?php 
-  if (!empty($_POST['email'])) {
-    if ($_POST['email']=="adminaly@admin.com.co") {
-      header('Location:dashboardAdmin.php');
-    }else{
-      $datos = [];
-      $datos= $usuDAO->obtenerUsuCorreo($_POST['email']);
-      foreach($datos as $dato){
-        $_SESSION['id']= $dato['id'];
-        $nombre= $dato['nombre']." ".$dato['apellido'];
-        $_SESSION['nom']= $nombre;
-      
+        header('Location:dashboardTrabajador.php');
       }
-      header('Location:dashboardTrabajador.php');
-
     }
-  }
+    else {
+      if( $_POST ) {
+        echo $usuDAO->dataError();
+      }
+    }
   ?>
-    <div class="row" id="central">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4 row d-flex justify-content-center shadow-lg p-3 mb-5 bg-body rounded">
-        <h1 class="text-center" id="titulo">Iniciar Sesión</h1><br><br>
-            <form action="" method="post">
-              <div class="row mb-3">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                <div class="col-sm-10">
-                  <input type="email" name="email" class="form-control" id="inputEmail3">
+  <body class="main-page">
+    <div class="container container-login">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 col-lg-4">
+          <div class="card-login">
+            <img src="./img/logo_aly_1.png" alt="Software ALY" class="logo-aly">
+            <h1 class="text-center title">Iniciar Sesión</h1>
+            <form action="./index.php" method="POST">
+              <div class="row my-3">
+                <div class="col-12">
+                  <input require type="email" name="email" placeholder="Email del usuario" class="form-control" id="inputEmail3">
                 </div>
               </div>
               <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                <div class="col-sm-10">
-                  <input type="password" name="pass" class="form-control" id="inputPassword3">
+                <div class="col-12">
+                  <input require type="password" name="pass" placeholder="Contraseña" class="form-control" id="inputPassword3">
                 </div>
               </div>
-              
+
               <div class="row mb-3">
-                <div class="col-sm-10 offset-sm-2">
+                <div class="col-12 text-start">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck1">
-                    <label class="form-check-label" for="gridCheck1">
-                      Recordar sesión
+                    <input class="form-check-input" type="checkbox" value="" id="inputSaveData">
+                    <label class="form-check-label" for="inputSaveData">
+                      Recordar Sesión
                     </label>
                   </div>
                 </div>
               </div>
-              <button class="btn btn-primary" type="submit" href="dashboard.html">Ingresar</a>
+              <button class="btn btn-primary" type="submit">Ingresar</a>
             </form>
+          </div>
         </div>
-        <div class="col-sm-4"></div>
+      </div>
     </div>
-</body>
-</html>
+  </body>
+</php>

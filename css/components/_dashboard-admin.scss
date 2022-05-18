@@ -1,0 +1,33 @@
+.container-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  .col-card {
+    .btn {
+      background-color: $darkblue;
+      color: white;
+      padding: 1.5em;
+      font-size: 1.2em;
+      line-height: 120%;
+      color: white;
+      font-family: $primary-font;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 240px;
+      transition: .4s ease-in-out;
+      img {
+        filter: invert(1);
+        max-width: 120px;
+        margin-bottom: 15px;
+      }
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 2px 2px 5px black;
+        background-color: $ligthblue;
+      }
+    }
+  }
+}
