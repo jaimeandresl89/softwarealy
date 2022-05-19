@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="js/bootstrap.bundle.min.js"></script>
-    <title>Inicio de sesión</title>
+    <title>::Trabajador::</title>
     <style>
         body{
            background-color:aliceblue
@@ -23,19 +23,18 @@
 </head>
 <body>
 <?php include_once 'menu2.php'; ?>
+<br><h2 class="text-center">Área de trabajo de <?php echo $_SESSION['nom']; ?></h2>
 <div class="container" id="cards">
+        
         <div class="row">
             <div class="col-sm d-flex justify-content-center">
-            <a href="gestionUsuarios.html" class="btn btn-primary"><img src="img/people-fill.svg" class="card-img-top" alt="...">Actualizar datos</a>
+            <a href="actualizardatos.php" class="btn btn-primary"><img src="img/people-fill.svg" class="card-img-top" alt="...">Actualizar datos</a>
             </div>
             <div class="col-sm d-flex justify-content-center">
                 <a href="info.php" class="btn btn-primary"><img src="img/journal-check.svg" class="card-img-top" alt="...">Responder Encuesta</a>
             </div>
             <div class="col-sm d-flex justify-content-center">
-                <a href="gestionRecomendaciones.php" class="btn btn-primary"><img src="img/list-check.svg" class="card-img-top" alt="...">Reporte Dolencias</a>
-            </div>
-            <div class="col-sm d-flex justify-content-center">
-                <a href="gestionRecomendaciones.php" class="btn btn-primary"><img src="img/list-check.svg" class="card-img-top" alt="...">Report</a>
+                <a href="avatar.php" class="btn btn-primary"><img src="img/list-check.svg" class="card-img-top" alt="...">Reporte Dolencias</a>
             </div>
             <div class="col-sm d-flex justify-content-center">
                 <a href="gestionRecomendaciones.php" class="btn btn-primary"><img src="img/telephone-forward-fill.svg" class="card-img-top" alt="...">Solicitar Asesoría</a>

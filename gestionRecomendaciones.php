@@ -9,7 +9,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
   <script src="js/sweetalert2.all.min.js"></script>
-  <title>--Recomendaciones--</title>
+  <title>::Recomendaciones::</title>
   <style>
     #car {
       padding-bottom: 80px;
