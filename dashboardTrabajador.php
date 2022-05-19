@@ -15,7 +15,7 @@ session_start();
     <div class="container container-cards py-aly">
       <div class="row d-flex justify-content-center">
         <div class="col-12 col-md-6 col-lg-4 col-card my-3 h-100">
-          <a href="usuario.php" class="btn btn-primary">
+          <a href="actualizardatos.php" class="btn btn-primary">
             <img src="img/people-fill.svg" class="card-img-top">
             Actualizar datos
           </a>

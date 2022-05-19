@@ -245,6 +245,20 @@ public function obtenerUsuCorreo($correo){
         $this->desconectar();
 }
 
+public function obtenerUsuId($id){
+  $this->conectar();
+      $sql = "SELECT * FROM usuarios WHERE id_usu='".$id."'";
+      //echo $sql;
+
+      if ($this->conex->query($sql)) {
+          $result = $this->conex->query($sql);
+          $row = mysqli_fetch_assoc($result);
+          return $row;
+      }
+
+      $this->desconectar();
+}
+
 public function delete($idusuarios){
 
 }
