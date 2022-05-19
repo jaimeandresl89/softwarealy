@@ -11,7 +11,7 @@
     if ( !empty($_POST['email']) && !empty($_POST['pass'])  ) {
       if ( $_POST['email'] == "adminaly@admin.com.co") {
         $_SESSION['type_user'] = 'admin';
-        $_SESSION['id'] = 'id_admin';
+        $_SESSION['id'] = 999;
         $_SESSION['nom'] = 'Administrador';
         header('Location:dashboardAdmin.php');
       } else {

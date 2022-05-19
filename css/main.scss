@@ -20,6 +20,12 @@ h1, h2, h3, h4, h5 {
     padding-bottom: 35px;
   }
 }
+
+.navbar-brand img {
+  max-width: 150px;
+  filter: invert(1);
+}
+
 $darkblue : #005B97;
 $ligthblue : #237cb8;
 
@@ -28,3 +34,5 @@ $primary-font : 'Roboto', sans-serif;
 @import './components/login-aly';
 @import './components/dashboard-admin';
 @import './components/gestionUsuarios';
+@import './components/registo-dolencias';
+@import './components/recomendaciones';
