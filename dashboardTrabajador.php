@@ -21,7 +21,7 @@ session_start();
           </a>
         </div>
         <div class="col-12 col-md-6 col-lg-4 col-card my-3 h-100">
-          <a href="encuesta.php" class="btn btn-primary">
+          <a href="info.php" class="btn btn-primary">
             <img src="img/journal-check.svg" class="card-img-top">
             Responder Encuesta
           </a>
@@ -39,7 +39,7 @@ session_start();
           </a>
         </div>
         <div class="col-12 col-md-6 col-lg-4 col-card my-3 h-100">
-          <a href="#" class="btn btn-primary">
+          <a href="https://wa.me/+573206636172?text=Necesito%20por%20favor%20una%20asesoria" target="blank" class="btn btn-primary">
             <img src="img/telephone-forward-fill.svg" class="card-img-top">
             Solicitar Asesoría
           </a>

@@ -19,12 +19,6 @@
           <a class="nav-link" href="gestionUsuarios.php">Gestión Usuarios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="dolencias.php">Dolencias</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="recomendaciones.php">Recomendaciones</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="gestionRecomendaciones.php">Gestión Recomendaciones</a>
         </li>
         <li class="nav-item">

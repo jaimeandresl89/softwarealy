@@ -25,7 +25,7 @@
         </a>
       </div>
       <div class="col-12 col-md-6 col-lg-4 col-card h-100">
-        <a href="info.php" class="btn">
+        <a href="encuesta.php" class="btn">
           <img src="img/journal-check.svg" class="card-img-top">
           Administrar Encuesta
         </a>

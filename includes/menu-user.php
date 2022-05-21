@@ -22,7 +22,7 @@
           <a class="nav-link" href="recomendaciones.php">Recomendaciones</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="encuesta.php">Encuesta</a>
+          <a class="nav-link" href="info.php">Encuesta</a>
         </li>
       </ul>
       <a class="nav-link" href="salir.php" class="navbar-toggler" style="color: #FFFFFF; text-decoration: none"><i class="bi bi-person-circle"></i> Cerrar sesión</a>
