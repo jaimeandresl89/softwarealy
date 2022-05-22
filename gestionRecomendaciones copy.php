@@ -36,9 +36,6 @@ include './classDAO/recomendacionesDAO.php';
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Modificar recomendaciones</button>
       </li>
-      <li class="nav-item" role="presentation">
-        <button class="nav-link" id="otro-tab" data-bs-toggle="tab" data-bs-target="#otro" type="button" role="tab" aria-controls="otro" aria-selected="false">Ver recomendaciones</button>
-      </li>
     </ul>
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -71,11 +68,6 @@ include './classDAO/recomendacionesDAO.php';
       <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
         <?php
         $recdao->show();
-        ?>
-      </div>
-      <div class="tab-pane fade" id="otro" role="tabpanel" aria-labelledby="otro-tab">
-        <?php
-        $recdao->showRecomendacionesUsuarios();
         ?>
       </div>
     </div>
